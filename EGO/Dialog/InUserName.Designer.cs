@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InUserName));
             label1 = new Label();
             textBox1 = new TextBox();
+            roundedButton1 = new control.RoundedButton();
+            linkLabel1 = new LinkLabel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(52, 48);
+            label1.Location = new Point(27, 48);
             label1.Name = "label1";
-            label1.Size = new Size(437, 39);
+            label1.Size = new Size(497, 39);
             label1.TabIndex = 0;
-            label1.Text = "输入对你的称呼，开启使用之旅";
+            label1.Text = "输入我对您的称呼，开启使用之旅吧";
             // 
             // textBox1
             // 
@@ -51,17 +54,55 @@
             textBox1.TabIndex = 1;
             textBox1.KeyPress += textBox1_KeyPress;
             // 
+            // roundedButton1
+            // 
+            roundedButton1.BackColor = Color.Transparent;
+            roundedButton1.BackgroundImage = Resource1.button;
+            roundedButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            roundedButton1.BorderColor = Color.Transparent;
+            roundedButton1.BorderWidth = 0;
+            roundedButton1.CornerRadius = 200;
+            roundedButton1.FlatAppearance.BorderSize = 0;
+            roundedButton1.FlatStyle = FlatStyle.Flat;
+            roundedButton1.Font = new Font("Microsoft YaHei UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            roundedButton1.ForeColor = Color.DimGray;
+            roundedButton1.Location = new Point(166, 177);
+            roundedButton1.Name = "roundedButton1";
+            roundedButton1.Size = new Size(195, 74);
+            roundedButton1.TabIndex = 2;
+            roundedButton1.Text = "决定了";
+            roundedButton1.UseVisualStyleBackColor = false;
+            roundedButton1.Click += roundedButton1_Click;
+            roundedButton1.MouseLeave += roundedButton1_MouseLeave;
+            roundedButton1.MouseHover += roundedButton1_MouseHover;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Microsoft YaHei UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            linkLabel1.LinkColor = Color.Red;
+            linkLabel1.Location = new Point(484, 9);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(59, 30);
+            linkLabel1.TabIndex = 3;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "退出";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // InUserName
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(555, 230);
+            ClientSize = new Size(555, 263);
             ControlBox = false;
+            Controls.Add(linkLabel1);
+            Controls.Add(roundedButton1);
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "InUserName";
-            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "InUserName";
             ResumeLayout(false);
             PerformLayout();
@@ -71,5 +112,7 @@
 
         private Label label1;
         private TextBox textBox1;
+        private control.RoundedButton roundedButton1;
+        private LinkLabel linkLabel1;
     }
 }

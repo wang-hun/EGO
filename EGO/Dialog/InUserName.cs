@@ -26,7 +26,55 @@ namespace EGO.Dialog
                 e.Handled = true;
 
             }
-           
+
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                Execute();
+                return true; // 表示已处理按键
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        void Execute()
+        {
+            var text = textBox1.Text;
+            if (text == "清河白莲")
+            {
+
+            }
+            else if (text == "沁人龙涎香")
+            {
+
+
+            }
+            else
+            {
+
+
+            }
+
+        }
+
+        private void roundedButton1_Click(object sender, EventArgs e)
+        {
+            Execute();
+        }
+
+        private void roundedButton1_MouseHover(object sender, EventArgs e)
+        {
+            roundedButton1.ForeColor = Color.FromArgb(153, 117, 0);
+        }
+
+        private void roundedButton1_MouseLeave(object sender, EventArgs e)
+        {
+            roundedButton1.ForeColor = Color.DimGray;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

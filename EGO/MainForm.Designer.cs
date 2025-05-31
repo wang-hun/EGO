@@ -68,13 +68,13 @@
             toolStripMenuItem2.Text = "关闭";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form1";
             FormClosing += Form1_FormClosing;
             contextMenuStrip1.ResumeLayout(false);

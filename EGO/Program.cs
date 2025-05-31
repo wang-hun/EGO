@@ -1,3 +1,5 @@
+using EGO.Dialog;
+
 namespace EGO
 {
     internal static class Program
@@ -8,14 +10,17 @@ namespace EGO
         [STAThread]
         static void Main()
         {
-            
-            bool isNotRunning; 
-            Mutex instance = new Mutex(true, "EGO", out isNotRunning); 
-            if (!isNotRunning)  
+
+            bool isNotRunning;
+            Mutex instance = new Mutex(true, "EGO", out isNotRunning);
+            if (!isNotRunning)
             {
                 Environment.Exit(1);
             }
             ApplicationConfiguration.Initialize();
+            var Config = Configuration.Instance;
+            if (!Config.ReadUser())
+                Application.Run(new InUserName());
             Application.Run(new MainForm());
         }
     }

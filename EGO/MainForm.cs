@@ -1,3 +1,5 @@
+using EGO.Dialog;
+
 namespace EGO
 {
     public partial class MainForm : Form
