@@ -33,6 +33,7 @@ namespace EGO
                 e.Cancel = true; // 取消关闭操作
                 this.Hide(); // 隐藏窗体
                 this.ShowInTaskbar = false;
+                
             }
         }
         public void ShowForm(object sender, EventArgs e)

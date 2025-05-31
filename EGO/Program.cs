@@ -9,9 +9,9 @@ namespace EGO
         static void Main()
         {
             
-            bool isNotRunning;  //互斥体判断
-            Mutex instance = new Mutex(true, "MutexName", out isNotRunning);   //同步基元变量
-            if (!isNotRunning)  // 如果不是未运行状态
+            bool isNotRunning; 
+            Mutex instance = new Mutex(true, "EGO", out isNotRunning); 
+            if (!isNotRunning)  
             {
                 Environment.Exit(1);
             }
