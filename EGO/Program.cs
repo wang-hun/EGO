@@ -8,8 +8,13 @@ namespace EGO
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            
+            bool isNotRunning;  //互斥体判断
+            Mutex instance = new Mutex(true, "MutexName", out isNotRunning);   //同步基元变量
+            if (!isNotRunning)  // 如果不是未运行状态
+            {
+                Environment.Exit(1);
+            }
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
         }
