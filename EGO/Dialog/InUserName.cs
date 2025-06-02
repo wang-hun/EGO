@@ -72,7 +72,9 @@ namespace EGO.Dialog
             roundedButton1.ForeColor = Color.DimGray;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+      
+
+        private void circularButton1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }

@@ -32,7 +32,7 @@
             label1 = new Label();
             textBox1 = new TextBox();
             roundedButton1 = new control.RoundedButton();
-            linkLabel1 = new LinkLabel();
+            circularButton1 = new control.CircularButton();
             SuspendLayout();
             // 
             // label1
@@ -76,18 +76,17 @@
             roundedButton1.MouseLeave += roundedButton1_MouseLeave;
             roundedButton1.MouseHover += roundedButton1_MouseHover;
             // 
-            // linkLabel1
+            // circularButton1
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Microsoft YaHei UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            linkLabel1.LinkColor = Color.Red;
-            linkLabel1.Location = new Point(484, 9);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(59, 30);
-            linkLabel1.TabIndex = 3;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "退出";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            circularButton1.BackColor = Color.Transparent;
+            circularButton1.BackgroundImage = Resource1.close;
+            circularButton1.BackgroundImageLayout = ImageLayout.Zoom;
+            circularButton1.Location = new Point(510, 1);
+            circularButton1.Name = "circularButton1";
+            circularButton1.Size = new Size(44, 44);
+            circularButton1.TabIndex = 4;
+            circularButton1.UseVisualStyleBackColor = false;
+            circularButton1.Click += circularButton1_Click;
             // 
             // InUserName
             // 
@@ -95,7 +94,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 263);
             ControlBox = false;
-            Controls.Add(linkLabel1);
+            Controls.Add(circularButton1);
             Controls.Add(roundedButton1);
             Controls.Add(textBox1);
             Controls.Add(label1);
@@ -113,6 +112,6 @@
         private Label label1;
         private TextBox textBox1;
         private control.RoundedButton roundedButton1;
-        private LinkLabel linkLabel1;
+        private control.CircularButton circularButton1;
     }
 }
