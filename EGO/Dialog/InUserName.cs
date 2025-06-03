@@ -42,11 +42,11 @@ namespace EGO.Dialog
             var text = textBox1.Text;
             if (text == "清河白莲")
             {
-
+                this.ShowError("这不是你的名字。");
             }
             else if (text == "沁人龙涎香")
             {
-
+                this.ShowError("这个名字会带来“灾厄”。");
 
             }
             else
