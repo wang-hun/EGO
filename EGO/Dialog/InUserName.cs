@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace EGO.Dialog
 {
@@ -51,8 +53,22 @@ namespace EGO.Dialog
             }
             else
             {
+                Directory.CreateDirectory(Settings.AppSavePath); // 自动创建不存在的目录
+                var data = new
+                {
+                    user = new
+                    {
+                        name = text  
+                    }
+                };
 
-
+                // 3. 组合文件路径
+                string filePath = Path.Combine(Settings.AppSavePath, "Master.data");
+                File.WriteAllText(filePath, JsonConvert.SerializeObject(data, Formatting.Indented));
+               
+                //todo ： 后续操作
+                //code：
+                this.Close();
             }
 
         }

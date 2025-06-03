@@ -30,8 +30,8 @@
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 // 测量文字尺寸GlowLabel
                 SizeF size = e.Graphics.MeasureString(Text, Font);
 
@@ -66,11 +66,11 @@
                 {
                     e.Graphics.DrawString(Text, Font, brush, point);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex+"");
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex+"");
+            //}
             base.OnPaint(e);
         }
 

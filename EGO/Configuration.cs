@@ -20,7 +20,7 @@ namespace EGO
         }
         public bool ReadUser()
         {
-            var userPath = Path.Combine(Settings.AppSavePath, "Master.xml");
+            var userPath = Path.Combine(Settings.AppSavePath, "Master.data");
             if (!File.Exists(userPath))
             {
                 return false;
