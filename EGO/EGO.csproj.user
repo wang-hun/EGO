@@ -7,6 +7,9 @@
     <Compile Update="control\Component.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="control\GlowLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Dialog\InUserName.cs">
       <SubType>Form</SubType>
     </Compile>

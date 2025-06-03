@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            glowLabel1 = new control.GlowLabel();
             panel1 = new Panel();
             roundedButton1 = new control.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(93, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 27);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // pictureBox1
             // 
@@ -68,20 +56,34 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 23.5294113F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 76.47059F));
             tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Location = new Point(101, 0);
+            tableLayoutPanel1.Controls.Add(glowLabel1, 1, 0);
+            tableLayoutPanel1.Location = new Point(117, 8);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(384, 75);
             tableLayoutPanel1.TabIndex = 4;
             // 
+            // glowLabel1
+            // 
+            glowLabel1.Anchor = AnchorStyles.Left;
+            glowLabel1.AutoSize = true;
+            glowLabel1.Font = new Font("Microsoft YaHei UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            glowLabel1.GlowColor = Color.Black;
+            glowLabel1.GlowWidth = 3;
+            glowLabel1.Location = new Point(93, 22);
+            glowLabel1.Name = "glowLabel1";
+            glowLabel1.Size = new Size(139, 30);
+            glowLabel1.TabIndex = 7;
+            glowLabel1.Text = "glowLabel1";
+            glowLabel1.TextColor = Color.Yellow;
+            // 
             // panel1
             // 
             panel1.Controls.Add(tableLayoutPanel1);
             panel1.Location = new Point(1, 75);
             panel1.Name = "panel1";
-            panel1.Size = new Size(575, 77);
+            panel1.Size = new Size(606, 93);
             panel1.TabIndex = 5;
             // 
             // roundedButton1
@@ -126,11 +128,11 @@
         }
 
         #endregion
-
-        private Label label1;
         private PictureBox pictureBox1;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private control.RoundedButton roundedButton1;
+        private control.GlowLabel highLightLabel1;
+        private control.GlowLabel glowLabel1;
     }
 }

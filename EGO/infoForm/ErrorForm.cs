@@ -16,7 +16,7 @@ namespace EGO.infoForm
         public ErrorForm(string info)
         {
             InitializeComponent();
-            this.label1.Text = info;
+            this.glowLabel1.Text = info;
             
         }
 
