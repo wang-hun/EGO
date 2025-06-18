@@ -1,4 +1,5 @@
 using EGO.Dialog;
+using EGO.form;
 
 namespace EGO
 {
@@ -21,6 +22,7 @@ namespace EGO
             var Config = Configuration.Instance;
             if (!Config.ReadUser())
                 Application.Run(new InUserName());
+            Application.Run(new LOGO_EGO(2500));
             Application.Run(new MainForm());
         }
     }
