@@ -17,7 +17,7 @@ namespace EGO
             if (!isNotRunning)
             {
                 Environment.Exit(1);
-            }
+            }//·À¶à¿ª
             ApplicationConfiguration.Initialize();
             var Config = Configuration.Instance;
             if (!Config.ReadUser())

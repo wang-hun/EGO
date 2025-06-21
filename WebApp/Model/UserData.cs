@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EGO
+namespace WebApp.Model
 {
     public class UserData
     {
         public string Name { get; set; }
+
+        public UserData(string name) 
+        { 
+           Name = name;
+        }
     }
 }

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebApp.Model;
+using WebApp.Static;
 
 
 namespace EGO.Dialog
@@ -42,6 +44,11 @@ namespace EGO.Dialog
         void Execute()
         {
             var text = textBox1.Text;
+            if (text.Trim().IsNullOrEmpty())
+            {
+                this.ShowError("用\"无名氏\"来称呼您？");
+                return;
+            }
             if (text == "清河白莲")
             {
                 this.ShowError("这不是你的名字。");
@@ -54,20 +61,20 @@ namespace EGO.Dialog
             else
             {
                 Directory.CreateDirectory(Settings.AppSavePath); // 自动创建不存在的目录
+                var user = new UserData(text);
                 var data = new
                 {
-                    user = new
-                    {
-                        name = text  
-                    }
+                    user
+
                 };
 
                 // 3. 组合文件路径
                 string filePath = Path.Combine(Settings.AppSavePath, "Master.data");
                 File.WriteAllText(filePath, JsonConvert.SerializeObject(data, Formatting.Indented));
-               
+
                 //todo ： 后续操作
                 //code：
+                RunTimeData.SetUser(user);
                 this.Close();
             }
 
