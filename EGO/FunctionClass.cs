@@ -16,5 +16,9 @@ namespace EGO
                 errorForm.ShowDialog(form);  // 正确：显示errorForm，指定owner为父窗体
             }
         }
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
     }
 }

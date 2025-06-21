@@ -1,15 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WebApp.Model;
-using WebApp.Static;
 
 
 namespace EGO.Dialog
@@ -74,7 +63,7 @@ namespace EGO.Dialog
 
                 //todo ： 后续操作
                 //code：
-                RunTimeData.SetUser(user);
+                //RunTimeData.SetUser(user);
                 this.Close();
             }
 
@@ -95,7 +84,7 @@ namespace EGO.Dialog
             roundedButton1.ForeColor = Color.DimGray;
         }
 
-      
+
 
         private void circularButton1_Click(object sender, EventArgs e)
         {

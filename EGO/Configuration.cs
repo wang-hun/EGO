@@ -1,12 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApp.Model;
-using WebApp.Static;
 
 namespace EGO
 {
@@ -29,18 +21,18 @@ namespace EGO
                 return false;
             }
             ///todo  文件存在，读取用户信息
-             var userData = JObject.Parse( File.ReadAllText(userPath))["user"]?.ToObject<UserData>();
+            var userData = JObject.Parse(File.ReadAllText(userPath))["user"]?.ToObject<UserData>();
             if (userData != null)
             {
-                RunTimeData.SetUser(userData);
+                //RunTimeData.SetUser(userData);
                 return true;
             }
-            else 
+            else
             {
                 return false;
             }
-       
-           
+
+
         }
 
     }
