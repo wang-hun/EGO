@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGO", "EGO\EGO.csproj", "{4C8ED441-66D9-4C39-86D3-178065B215AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EGO", "EGO\EGO.csproj", "{4C8ED441-66D9-4C39-86D3-178065B215AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEGO", "WebEGO\WebEGO.csproj", "{D833C7F3-BCAB-4185-B99B-DE382E989DDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4C8ED441-66D9-4C39-86D3-178065B215AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C8ED441-66D9-4C39-86D3-178065B215AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C8ED441-66D9-4C39-86D3-178065B215AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D833C7F3-BCAB-4185-B99B-DE382E989DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D833C7F3-BCAB-4185-B99B-DE382E989DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D833C7F3-BCAB-4185-B99B-DE382E989DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D833C7F3-BCAB-4185-B99B-DE382E989DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
